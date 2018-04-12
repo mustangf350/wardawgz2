@@ -3,33 +3,33 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-book-edit',
-  templateUrl: './book-edit.component.html',
-  styleUrls: ['./book-edit.component.css'],
+  selector: 'app-menu-edit',
+  templateUrl: './menu-edit.component.html',
+  styleUrls: ['./menu-edit.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class BookEditComponent implements OnInit {
+export class MenuEditComponent implements OnInit {
 
-  book: any = {};
+  menu: any = {};
 
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.getBook(this.route.snapshot.params['id']);
+    this.getmenu(this.route.snapshot.params['id']);
   }
 
-  getBook(id) {
-    this.http.get('/book/'+id).subscribe(data => {
-      this.book = data;
+  getmenu(id) {
+    this.http.get('/menu/'+id).subscribe(data => {
+      this.menu = data;
     });
   }
 
-  updateBook(id) {
-    this.book.updated_date = Date.now();
-    this.http.put('/book/'+id, this.book)
+  updatemenu(id) {
+    this.menu.updated_date = Date.now();
+    this.http.put('/menu/'+id, this.menu)
       .subscribe(res => {
           let id = res['_id'];
-          this.router.navigate(['/book-details', id]);
+          this.router.navigate(['/menu-details', id]);
         }, (err) => {
           console.log(err);
         }

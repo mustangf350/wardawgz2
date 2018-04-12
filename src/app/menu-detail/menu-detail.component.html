@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>{{ menu.title }}</h1>
+  <dl class="list">
+    <dt>Combo</dt>
+    <dd>{{ menu.Combo }}</dd>
+    <dt>Ingredients</dt>
+    <dd>{{ menu.Ingredients }}</dd>
+    <dt>Price</dt>
+    <dd>{{ menu.Price }}</dd>
+    <dt>Calories</dt>
+    <dd>{{ menu.Calories }}</dd>
+    <dt>Update Date</dt>
+    <dd>{{ menu.updated_date | date:'short' }}</dd>
+  </dl>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <a [routerLink]="['/menu-edit', menu._id]" class="btn btn-success">EDIT</a>
+    <button class="btn btn-danger" type="button" (click)="deleteMenu(menu._id)">DELETE</button>
+  </div>
+</div>

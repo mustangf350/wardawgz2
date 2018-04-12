@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Add New Menu Item</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveMenu()" #menuForm="ngForm">
+        <div class="form-group">
+          <label for="name">Combo</label>
+          <input type="text" class="form-control" [(ngModel)]="menu.combo" name="combo" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Ingredients</label>
+          <input type="text" class="form-control" [(ngModel)]="menu.ingredients" name="ingredients" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Price</label>
+          <input type="number" class="form-control" [(ngModel)]="menu.price" name="price" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Calories</label>
+          <input type="number" class="form-control" [(ngModel)]="menu.calories" name="calories" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!menuForm.form.valid">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

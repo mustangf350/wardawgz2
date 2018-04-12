@@ -5,44 +5,44 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { BookComponent } from './book/book.component';
-import { BookDetailComponent } from './book-detail/book-detail.component';
-import { BookCreateComponent } from './book-create/book-create.component';
-import { BookEditComponent } from './book-edit/book-edit.component';
+import { MenuComponent } from './menu/menu.component';
+import { MenuDetailComponent } from './menu-detail/menu-detail.component';
+import { MenuCreateComponent } from './menu-create/menu-create.component';
+import { MenuEditComponent } from './menu-edit/menu-edit.component';
 
 const appRoutes: Routes = [
   {
-    path: 'books',
-    component: BookComponent,
-    data: { title: 'Book List' }
+    path: 'menu',
+    component: MenuComponent,
+    data: { title: 'menu List' }
   },
   {
-    path: 'book-details/:id',
-    component: BookDetailComponent,
-    data: { title: 'Book Details' }
+    path: 'menu-details/:id',
+    component: MenuDetailComponent,
+    data: { title: 'menu Details' }
   },
   {
-    path: 'book-create',
-    component: BookCreateComponent,
-    data: { title: 'Create Book' }
+    path: 'menu-create',
+    component: MenuCreateComponent,
+    data: { title: 'Create menu' }
   },
   {
-    path: 'book-edit/:id',
-    component: BookEditComponent,
-    data: { title: 'Edit Book' }
+    path: 'menu-edit/:id',
+    component: MenuEditComponent,
+    data: { title: 'Edit menu' }
   },
   { path: '',
-    redirectTo: '/books',
+    redirectTo: '/menu',
     pathMatch: 'full'
   }
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent,
-    BookDetailComponent,
-    BookCreateComponent,
-    BookEditComponent
+    MenuComponent,
+    MenuDetailComponent,
+    MenuCreateComponent,
+    MenuEditComponent
   ],
   imports: [
     BrowserModule,

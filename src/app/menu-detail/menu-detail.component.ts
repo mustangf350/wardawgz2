@@ -3,31 +3,31 @@ import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-book-detail',
-  templateUrl: './book-detail.component.html',
-  styleUrls: ['./book-detail.component.css'],
+  selector: 'app-menu-detail',
+  templateUrl: './menu-detail.component.html',
+  styleUrls: ['./menu-detail.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class BookDetailComponent implements OnInit {
+export class MenuDetailComponent implements OnInit {
 
-  book = {};
+  menu = {};
 
   constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit() {
-    this.getBookDetail(this.route.snapshot.params['id']);
+    this.getMenuDetail(this.route.snapshot.params['id']);
   }
 
-  getBookDetail(id) {
-    this.http.get('/book/'+id).subscribe(data => {
-      this.book = data;
+  getMenuDetail(id) {
+    this.http.get('/menu/'+id).subscribe(data => {
+      this.menu = data;
     });
   }
 
-  deleteBook(id) {
-    this.http.delete('/book/'+id)
+  deleteMenu(id) {
+    this.http.delete('/menu/'+id)
       .subscribe(res => {
-          this.router.navigate(['/books']);
+          this.router.navigate(['/menu']);
         }, (err) => {
           console.log(err);
         }
