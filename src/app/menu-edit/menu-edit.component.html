@@ -2,22 +2,22 @@
   <h1>Edit Menu</h1>
   <div class="row">
     <div class="col-md-6">
-      <form (ngSubmit)="updateMenu(menu._id)" #menuForm="ngForm">
+      <form (ngSubmit)="updatemenu(menu._id)" #menuForm="ngForm">
         <div class="form-group">
           <label for="name">Combo</label>
-          <input type="text" class="form-control" [(ngModel)]="menu.Combo" name="Combo" required>
+          <input type="text" class="form-control" [(ngModel)]="menu.Combo" name="combo" required>
         </div>
         <div class="form-group">
           <label for="name">Ingredients</label>
-          <input type="text" class="form-control" [(ngModel)]="menu.Ingredients" name="Ingredients" required>
+          <input type="text" class="form-control" [(ngModel)]="menu.Ingredients" name="ingredients" required>
         </div>
         <div class="form-group">
           <label for="name">Calories</label>
-          <input type="Calories" class="form-control" [(ngModel)]="menu.Calories" name="Calories" required>
+          <input type="Calories" class="form-control" [(ngModel)]="menu.Calories" name="calories" required>
         </div>
         <div class="form-group">
           <label for="name">Price</label>
-          <input type="number" class="form-control" [(ngModel)]="menu.Price" name="Price" required>
+          <input type="number" class="form-control" [(ngModel)]="menu.Price" name="price" required>
         </div>
         
         <div class="form-group">

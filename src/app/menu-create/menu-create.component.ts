@@ -17,11 +17,11 @@ export class MenuCreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  saveMenu() {
-    this.http.post('/menu', this.menu)
+  saveItems() {
+    this.http.post('/items', this.menu)
       .subscribe(res => {
           let id = res['_id'];
-          this.router.navigate(['/menu-details', id]);
+          this.router.navigate(['/menu', id]);
         }, (err) => {
           console.log(err);
         }

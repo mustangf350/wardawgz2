@@ -10,12 +10,12 @@
 //   updated_date: { type: Date, default: Date.now },
 // });
 
-// module.exports = mongoose.model('Book', BookSchema);
+// module.exports = mongoose.model('menu', menuSchema);
 
 
 var mongoose = require('mongoose');
 
-var menuSchema = new mongoose.Schema({
+var MenuSchema = new mongoose.Schema({
     combo: String,
     price: Number,
     ingredients: String,
@@ -23,4 +23,4 @@ var menuSchema = new mongoose.Schema({
     updated_date: { type: Date, default: Date.now },
   });
 
-  module.exports = mongoose.model('menu', menuSchema);
+  module.exports = mongoose.model('Menu', MenuSchema);

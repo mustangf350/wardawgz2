@@ -18,7 +18,7 @@ export class MenuEditComponent implements OnInit {
     this.getmenu(this.route.snapshot.params['id']);
   }
 
-  getmenu(id) {
+  getmenu(id,) {
     this.http.get('/menu/'+id).subscribe(data => {
       this.menu = data;
     });
@@ -26,7 +26,7 @@ export class MenuEditComponent implements OnInit {
 
   updatemenu(id) {
     this.menu.updated_date = Date.now();
-    this.http.put('/menu/'+id, this.menu)
+    this.http.put('/items/'+id, this.menu)
       .subscribe(res => {
           let id = res['_id'];
           this.router.navigate(['/menu-details', id]);

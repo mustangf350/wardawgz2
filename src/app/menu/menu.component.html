@@ -9,16 +9,16 @@
       <tr>
         <th>Combo</th>
         <th>Ingredients</th>
-        <th>Calories</th>
         <th>Price</th>
+        <th>Calories</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let item of items">
         <td>{{ item.combo }}</td>
         <td>{{ item.ingredients }}</td>
-        <td>{{ item.calories }}</td>
         <td>{{ item.price }}</td>
+        <td>{{ item.calories }}</td>
         <td><a [routerLink]="['/menu-details', item._id]">Show Detail</a></td>
       </tr>
     </tbody>
