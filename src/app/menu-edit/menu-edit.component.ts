@@ -24,7 +24,7 @@ export class MenuEditComponent implements OnInit {
     });
   }
 
-  updatemenu(id) {
+  updateItems(id) {
     this.menu.updated_date = Date.now();
     this.http.put('/items/'+id, this.menu)
       .subscribe(res => {
