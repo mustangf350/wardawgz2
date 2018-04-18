@@ -2,7 +2,7 @@
   <h1>Add New Menu Item</h1>
   <div class="row">
     <div class="col-md-6">
-      <form (ngSubmit)="saveMenu()" #menuForm="ngForm">
+      <form (ngSubmit)="saveItems()" #menuForm="ngForm">
         <div class="form-group">
           <label for="name">Combo</label>
           <input type="text" class="form-control" [(ngModel)]="menu.combo" name="combo" required>
