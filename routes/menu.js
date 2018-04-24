@@ -13,8 +13,10 @@ router.get('/', function(req, res, next) {
 
 /* GET SINGLE Menu BY ID */
 router.get('/:id', function(req, res, next) {
+  console.log("looking up item ");
   Menu.findById(req.params.id, function (err, post) {
     if (err) return next(err);
+    console.log(post);
     res.json(post);
   });
 });
@@ -29,6 +31,7 @@ router.post('/', function(req, res, next) {
 
 /* UPDATE Menu */
 router.put('/:id', function(req, res, next) {
+  console.log("item update");
   Menu.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);

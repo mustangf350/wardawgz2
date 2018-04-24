@@ -18,8 +18,8 @@ export class MenuEditComponent implements OnInit {
     this.getmenu(this.route.snapshot.params['id']);
   }
 
-  getmenu(id,) {
-    this.http.get('/menu/'+id).subscribe(data => {
+  getmenu(id) {
+    this.http.get('/items/'+id).subscribe(data => {
       this.menu = data;
     });
   }
