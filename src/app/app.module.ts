@@ -16,6 +16,12 @@ const appRoutes: Routes = [
     component: MenuComponent,
     data: { title: 'menu List' }
   },
+  
+  {
+    path: 'menu-create',
+    component: MenuCreateComponent,
+    data: { title: 'menu Create' }
+  },
   {
     path: 'menu-details/:id',
     component: MenuDetailComponent,
@@ -29,7 +35,7 @@ const appRoutes: Routes = [
   {
     path: 'items-edit/:id',
     component: MenuEditComponent,
-    data: { title: 'Edit menu' }
+    data: { title: 'menu Edit' }
   },
   { path: '',
     redirectTo: '/menu',

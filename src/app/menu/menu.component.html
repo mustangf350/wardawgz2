@@ -1,7 +1,12 @@
 <div class="container">
-  <h1>Wardawgz Menu
-    <a [routerLink]="['/menu-create']" class="btn btn-default btn-lg">
+    <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/abstract-1238247__340.jpg" alt="burger pic">
+  <img src ="https://cdn.pixabay.com/photo/2018/02/26/21/44/hamburger-3184108__340.png" alt="burger pic">
+  <img src ="https://cdn.pixabay.com/photo/2018/03/04/20/08/burger-3199088__340.jpg" alt="burger pic">
+  
+    <h1>Wardawgz Menu
+      <a [routerLink]="['/menu-create']" class="btn btn-default btn-lg">
       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      
     </a>
   </h1>
   <table class="table">
@@ -9,16 +14,16 @@
       <tr>
         <th>Combo</th>
         <th>Ingredients</th>
-        <th>Calories</th>
         <th>Price</th>
+        <th>Calories</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let item of items">
         <td>{{ item.combo }}</td>
         <td>{{ item.ingredients }}</td>
-        <td>{{ item.calories }}</td>
         <td>{{ item.price }}</td>
+        <td>{{ item.calories }}</td>
         <td><a [routerLink]="['/menu-details', item._id]">Show Detail</a></td>
       </tr>
     </tbody>

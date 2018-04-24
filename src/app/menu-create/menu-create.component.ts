@@ -21,7 +21,7 @@ export class MenuCreateComponent implements OnInit {
     this.http.post('/items', this.item)
       .subscribe(res => {
           let id = res['_id'];
-          this.router.navigate(['/menu-details', id]);
+          this.router.navigate(['/menu', id]);
         }, (err) => {
           console.log(err);
         }
