@@ -27,7 +27,7 @@ const appRoutes: Routes = [
     data: { title: 'Create menu' }
   },
   {
-    path: 'menu-edit/:id',
+    path: 'items-edit/:id',
     component: MenuEditComponent,
     data: { title: 'Edit menu' }
   },

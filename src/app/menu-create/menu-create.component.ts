@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MenuCreateComponent implements OnInit {
 
-  menu = {};
+  item = {};
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -18,7 +18,7 @@ export class MenuCreateComponent implements OnInit {
   }
 
   saveItems() {
-    this.http.post('/items', this.menu)
+    this.http.post('/items', this.item)
       .subscribe(res => {
           let id = res['_id'];
           this.router.navigate(['/menu-details', id]);

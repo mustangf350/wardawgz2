@@ -19,7 +19,7 @@ export class MenuEditComponent implements OnInit {
   }
 
   getmenu(id) {
-    this.http.get('/menu/'+id).subscribe(data => {
+    this.http.get('/items/'+id).subscribe(data => {
       this.menu = data;
     });
   }
